@@ -1,0 +1,497 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 52;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8338A47D26BBBCDF008677FE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8338A47C26BBBCDF008677FE /* AppDelegate.swift */; };
+		8338A47F26BBBCDF008677FE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8338A47E26BBBCDF008677FE /* SceneDelegate.swift */; };
+		8338A48126BBBCDF008677FE /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8338A48026BBBCDF008677FE /* MainViewController.swift */; };
+		8338A48426BBBCDF008677FE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8338A48226BBBCDF008677FE /* Main.storyboard */; };
+		8338A48626BBBCE1008677FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8338A48526BBBCE1008677FE /* Assets.xcassets */; };
+		8338A48926BBBCE1008677FE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8338A48726BBBCE1008677FE /* LaunchScreen.storyboard */; };
+		8338A49726BBCAFA008677FE /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8338A49626BBCAFA008677FE /* State.swift */; };
+		8338A49926BBCB34008677FE /* TorchSettingsState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8338A49826BBCB34008677FE /* TorchSettingsState.swift */; };
+		8338A49B26BBCB98008677FE /* DateState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8338A49A26BBCB98008677FE /* DateState.swift */; };
+		8338A49F26BBCBD3008677FE /* UpdateDateMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8338A49E26BBCBD3008677FE /* UpdateDateMiddleware.swift */; };
+		8338A4A126BBCC7C008677FE /* ApplicationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8338A4A026BBCC7C008677FE /* ApplicationState.swift */; };
+		8338A4A626BBCDB5008677FE /* StoreLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8338A4A526BBCDB5008677FE /* StoreLocator.swift */; };
+		8338A4AE26BBD13D008677FE /* MainViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8338A4AD26BBD13D008677FE /* MainViewPresenter.swift */; };
+		8338A4B126BBD14A008677FE /* MainScreenFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8338A4B026BBD14A008677FE /* MainScreenFactory.swift */; };
+		8338A4B326BBDC25008677FE /* FlashlightMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8338A4B226BBDC25008677FE /* FlashlightMiddleware.swift */; };
+		8338A4B626BC0415008677FE /* ReduxCore in Frameworks */ = {isa = PBXBuildFile; productRef = 8338A4B526BC0415008677FE /* ReduxCore */; };
+		8338A4B726BC0415008677FE /* ReduxCore in Embed Frameworks */ = {isa = PBXBuildFile; productRef = 8338A4B526BC0415008677FE /* ReduxCore */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		8338A49426BBCAB0008677FE /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				8338A4B726BC0415008677FE /* ReduxCore in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		8338A47926BBBCDF008677FE /* Flashlight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Flashlight.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8338A47C26BBBCDF008677FE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8338A47E26BBBCDF008677FE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		8338A48026BBBCDF008677FE /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		8338A48326BBBCDF008677FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8338A48526BBBCE1008677FE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8338A48826BBBCE1008677FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8338A48A26BBBCE1008677FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8338A49626BBCAFA008677FE /* State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
+		8338A49826BBCB34008677FE /* TorchSettingsState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TorchSettingsState.swift; sourceTree = "<group>"; };
+		8338A49A26BBCB98008677FE /* DateState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateState.swift; sourceTree = "<group>"; };
+		8338A49E26BBCBD3008677FE /* UpdateDateMiddleware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateDateMiddleware.swift; sourceTree = "<group>"; };
+		8338A4A026BBCC7C008677FE /* ApplicationState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationState.swift; sourceTree = "<group>"; };
+		8338A4A526BBCDB5008677FE /* StoreLocator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreLocator.swift; sourceTree = "<group>"; };
+		8338A4AD26BBD13D008677FE /* MainViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewPresenter.swift; sourceTree = "<group>"; };
+		8338A4B026BBD14A008677FE /* MainScreenFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenFactory.swift; sourceTree = "<group>"; };
+		8338A4B226BBDC25008677FE /* FlashlightMiddleware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashlightMiddleware.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8338A47626BBBCDF008677FE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8338A4B626BC0415008677FE /* ReduxCore in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8338A47026BBBCDF008677FE = {
+			isa = PBXGroup;
+			children = (
+				8338A47B26BBBCDF008677FE /* Flashlight */,
+				8338A47A26BBBCDF008677FE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8338A47A26BBBCDF008677FE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8338A47926BBBCDF008677FE /* Flashlight.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8338A47B26BBBCDF008677FE /* Flashlight */ = {
+			isa = PBXGroup;
+			children = (
+				8338A49C26BBCBC3008677FE /* Sources */,
+				8338A4A926BBCE17008677FE /* Supporting Files */,
+			);
+			path = Flashlight;
+			sourceTree = "<group>";
+		};
+		8338A49526BBCAF3008677FE /* States */ = {
+			isa = PBXGroup;
+			children = (
+				8338A49626BBCAFA008677FE /* State.swift */,
+				8338A49826BBCB34008677FE /* TorchSettingsState.swift */,
+				8338A49A26BBCB98008677FE /* DateState.swift */,
+				8338A4A026BBCC7C008677FE /* ApplicationState.swift */,
+			);
+			path = States;
+			sourceTree = "<group>";
+		};
+		8338A49C26BBCBC3008677FE /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				8338A4A426BBCDAE008677FE /* Common */,
+				8338A49D26BBCBCA008677FE /* Middlewares */,
+				8338A49526BBCAF3008677FE /* States */,
+				8338A4AA26BBCE3C008677FE /* Application */,
+				8338A4A726BBCE07008677FE /* Presentation */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		8338A49D26BBCBCA008677FE /* Middlewares */ = {
+			isa = PBXGroup;
+			children = (
+				8338A49E26BBCBD3008677FE /* UpdateDateMiddleware.swift */,
+				8338A4B226BBDC25008677FE /* FlashlightMiddleware.swift */,
+			);
+			path = Middlewares;
+			sourceTree = "<group>";
+		};
+		8338A4A426BBCDAE008677FE /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				8338A4A526BBCDB5008677FE /* StoreLocator.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		8338A4A726BBCE07008677FE /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				8338A4AC26BBD12D008677FE /* Main */,
+				8338A4AB26BBD032008677FE /* LaunchScreen */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		8338A4A926BBCE17008677FE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8338A48526BBBCE1008677FE /* Assets.xcassets */,
+				8338A48A26BBBCE1008677FE /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8338A4AA26BBCE3C008677FE /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				8338A47E26BBBCDF008677FE /* SceneDelegate.swift */,
+				8338A47C26BBBCDF008677FE /* AppDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		8338A4AB26BBD032008677FE /* LaunchScreen */ = {
+			isa = PBXGroup;
+			children = (
+				8338A48726BBBCE1008677FE /* LaunchScreen.storyboard */,
+			);
+			path = LaunchScreen;
+			sourceTree = "<group>";
+		};
+		8338A4AC26BBD12D008677FE /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				8338A4B026BBD14A008677FE /* MainScreenFactory.swift */,
+				8338A4AD26BBD13D008677FE /* MainViewPresenter.swift */,
+				8338A48026BBBCDF008677FE /* MainViewController.swift */,
+				8338A48226BBBCDF008677FE /* Main.storyboard */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8338A47826BBBCDF008677FE /* Flashlight */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8338A48D26BBBCE1008677FE /* Build configuration list for PBXNativeTarget "Flashlight" */;
+			buildPhases = (
+				8338A47526BBBCDF008677FE /* Sources */,
+				8338A47626BBBCDF008677FE /* Frameworks */,
+				8338A47726BBBCDF008677FE /* Resources */,
+				8338A49426BBCAB0008677FE /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Flashlight;
+			packageProductDependencies = (
+				8338A4B526BC0415008677FE /* ReduxCore */,
+			);
+			productName = Flashlight;
+			productReference = 8338A47926BBBCDF008677FE /* Flashlight.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8338A47126BBBCDF008677FE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					8338A47826BBBCDF008677FE = {
+						CreatedOnToolsVersion = 12.5;
+					};
+				};
+			};
+			buildConfigurationList = 8338A47426BBBCDF008677FE /* Build configuration list for PBXProject "Flashlight" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8338A47026BBBCDF008677FE;
+			packageReferences = (
+				8338A4B426BC0415008677FE /* XCRemoteSwiftPackageReference "ReduxCore" */,
+			);
+			productRefGroup = 8338A47A26BBBCDF008677FE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8338A47826BBBCDF008677FE /* Flashlight */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8338A47726BBBCDF008677FE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8338A48926BBBCE1008677FE /* LaunchScreen.storyboard in Resources */,
+				8338A48626BBBCE1008677FE /* Assets.xcassets in Resources */,
+				8338A48426BBBCDF008677FE /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8338A47526BBBCDF008677FE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8338A48126BBBCDF008677FE /* MainViewController.swift in Sources */,
+				8338A4B326BBDC25008677FE /* FlashlightMiddleware.swift in Sources */,
+				8338A4A626BBCDB5008677FE /* StoreLocator.swift in Sources */,
+				8338A4AE26BBD13D008677FE /* MainViewPresenter.swift in Sources */,
+				8338A49B26BBCB98008677FE /* DateState.swift in Sources */,
+				8338A47D26BBBCDF008677FE /* AppDelegate.swift in Sources */,
+				8338A47F26BBBCDF008677FE /* SceneDelegate.swift in Sources */,
+				8338A4B126BBD14A008677FE /* MainScreenFactory.swift in Sources */,
+				8338A49926BBCB34008677FE /* TorchSettingsState.swift in Sources */,
+				8338A49F26BBCBD3008677FE /* UpdateDateMiddleware.swift in Sources */,
+				8338A4A126BBCC7C008677FE /* ApplicationState.swift in Sources */,
+				8338A49726BBCAFA008677FE /* State.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		8338A48226BBBCDF008677FE /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8338A48326BBBCDF008677FE /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8338A48726BBBCE1008677FE /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8338A48826BBBCE1008677FE /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8338A48B26BBBCE1008677FE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		8338A48C26BBBCE1008677FE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8338A48E26BBBCE1008677FE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = "$(SRCROOT)/Flashlight/Supporting Files/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.betterme.reduxcore.example.Flashlight;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8338A48F26BBBCE1008677FE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = "$(SRCROOT)/Flashlight/Supporting Files/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.betterme.reduxcore.example.Flashlight;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8338A47426BBBCDF008677FE /* Build configuration list for PBXProject "Flashlight" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8338A48B26BBBCE1008677FE /* Debug */,
+				8338A48C26BBBCE1008677FE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8338A48D26BBBCE1008677FE /* Build configuration list for PBXNativeTarget "Flashlight" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8338A48E26BBBCE1008677FE /* Debug */,
+				8338A48F26BBBCE1008677FE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8338A4B426BC0415008677FE /* XCRemoteSwiftPackageReference "ReduxCore" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/betterme-dev/ReduxCore.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8338A4B526BC0415008677FE /* ReduxCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8338A4B426BC0415008677FE /* XCRemoteSwiftPackageReference "ReduxCore" */;
+			productName = ReduxCore;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 8338A47126BBBCDF008677FE /* Project object */;
+}
