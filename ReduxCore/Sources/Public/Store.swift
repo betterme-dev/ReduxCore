@@ -14,8 +14,7 @@ public typealias Middleware<State> = (@escaping Dispatch, Action, State, State) 
 public typealias Reducer<State> = (State, Action) -> State
 
 /// Store is a single mutation point of our app state.
-/// Store is a natural dispatcher
-public final class Store<State>: Dispatcher {
+public final class Store<State> {
     /// Store has its own queue, where all accesses and mutations are performed
     private let queue = DispatchQueue(label: "store private queue")
     private let subscriptionLock = UnfairLock()
@@ -28,21 +27,18 @@ public final class Store<State>: Dispatcher {
     private var dispatch: Dispatch?
     
     /// Store should notify everyone about state changes
-    private var subscribers: Set<CommandWith<State>> = []
+    private var subscribers: Set<Subscription<State>> = []
     
     private let middlewares: [Middleware<State>]
-    private let logger: ((_ action: Action) -> Void)?
     
     public init(
         state: State,
         reducer: @escaping Reducer<State>,
-        middlewares: [Middleware<State>],
-        logger: ((_ action: Action) -> Void)? = nil
+        middlewares: [Middleware<State>]
     ) {
         self.state = state
         self.reducer = reducer
         self.middlewares = middlewares
-        self.logger = logger
         
         self.dispatch = { action in
             let oldState = self.state
@@ -52,31 +48,34 @@ public final class Store<State>: Dispatcher {
                 middleware(self.dispatch, action, oldState, newState)
             }
             self.subscriptionLock.lock()
-            self.subscribers.forEach { $0.perform(with: newState) }
+            self.subscribers.forEach { $0.update(with: newState) }
             self.subscriptionLock.unlock()
         }
     }
     
     /// Dispatch is async by nature.
     public func dispatch(action: Action) {
-        logger?(action)
         queue.async {
             self.dispatch?(action)
         }
     }
     
-    /// Observing a store will return a `Command` to stop observation
-    @discardableResult
-    public func observe(with command: CommandWith<State>) -> Command {
+    /// Attaches the specified action to the state updates.
+    ///
+    /// - Parameter action: The action to attach to watch for state updates.
+    /// - Returns: A `Cancellation` instance that makes it possible for a caller to cancel observation.
+    public func observe(with action: @escaping (State) -> Void) -> Cancellation {
+        let subscription = Subscription(action)
         subscriptionLock.lock()
-        subscribers.insert(command)
+        subscribers.insert(subscription)
         subscriptionLock.unlock()
-        command.perform(with: state)
-        /// Cancel observing should not keep link to command, so we need to use `weak` here
-        let endObserving = Command(id: "Dispose observing for \(command)") { [weak command] in
-            guard let command = command else { return }
+        subscription.update(with: state)
+        
+        /// Cancellation object should not keep a reference to subscription, so we need to use `weak` here
+        let endObserving = Cancellation { [weak self, weak subscription] in
+            guard let self = self, let subscription = subscription else { return }
             self.subscriptionLock.lock()
-            self.subscribers.remove(command)
+            self.subscribers.remove(subscription)
             self.subscriptionLock.unlock()
         } // Also mutation of `subscribers` need to be protected by lock
         
