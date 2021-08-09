@@ -12,7 +12,7 @@ import Foundation
 ///
 /// ``Store/observe(with:)``  implementation can use this type to provide a “cancellation token” that makes it possible for a caller to cancel observation.
 ///
-/// An ``Cancellation`` instance automatically calls ``cancel()`` when deinitialized, unless called manually.
+/// A ``Cancellation`` instance automatically calls ``cancel()`` when deinitialized, unless called manually.
 public final class Cancellation {
     private var isCanceled: Bool = false
     private let cancelAction: () -> Void

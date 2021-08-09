@@ -138,7 +138,7 @@ public extension CommandWith {
         }
     }
     
-    /// Splitted in 2 functions (not 1 with a default value of id) to have a possibility to use **pipes**
+    /// Splitted into 2 functions (not 1 with a default value of id) to have a possibility to use **pipes**
     func then(_ another: CommandWith) -> CommandWith {
         then(another, id: UUID().uuidString)
     }
