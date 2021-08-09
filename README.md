@@ -23,7 +23,7 @@ import PackageDescription
 let package = Package(
     [...]
     dependencies: [
-        .package(url: "https://github.com/betterme-dev/ReduxCore", from: "1.0.0"),
+        .package(url: "https://github.com/betterme-dev/ReduxCore", from: "2.0.0"),
     ]
 )
 ```
