@@ -33,6 +33,9 @@ let package = Package(
 We use SPM in all examples.
 To run the example project, just clone the repo, open [Examples](https://github.com/betterme-dev/ReduxCore/tree/main/Examples) folder, and choose a project you want. 
 
+## Talks
+- [BetterMe iOS conference #1](https://www.youtube.com/watch?v=sYMwmMVbz90&t=4119s) | [Slides](https://docs.google.com/presentation/d/183yVSZBEXmtta5bJ9-xMOuaUTbuQpWpg4F0oSDR-nMI)
+
 ## What's next
 
 - Add more examples
