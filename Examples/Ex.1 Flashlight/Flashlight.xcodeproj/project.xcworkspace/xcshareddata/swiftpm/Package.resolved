@@ -5,9 +5,9 @@
         "package": "ReduxCore",
         "repositoryURL": "https://github.com/betterme-dev/ReduxCore.git",
         "state": {
-          "branch": null,
-          "revision": "08ff57bed110bfeca109a0e4fc4acfe83c996604",
-          "version": "1.0.0"
+          "branch": "refactoring",
+          "revision": "8b4d0e034bae91aba2559e9e5076d684fb480dd9",
+          "version": null
         }
       }
     ]

@@ -24,6 +24,8 @@
 		8338A4B326BBDC25008677FE /* FlashlightMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8338A4B226BBDC25008677FE /* FlashlightMiddleware.swift */; };
 		8338A4B626BC0415008677FE /* ReduxCore in Frameworks */ = {isa = PBXBuildFile; productRef = 8338A4B526BC0415008677FE /* ReduxCore */; };
 		8338A4B726BC0415008677FE /* ReduxCore in Embed Frameworks */ = {isa = PBXBuildFile; productRef = 8338A4B526BC0415008677FE /* ReduxCore */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		834BF98A26C1525E00624E63 /* CommandWith.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834BF98926C1525E00624E63 /* CommandWith.swift */; };
+		834BF98C26C153EA00624E63 /* DebugLogMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834BF98B26C153EA00624E63 /* DebugLogMiddleware.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -58,6 +60,8 @@
 		8338A4AD26BBD13D008677FE /* MainViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewPresenter.swift; sourceTree = "<group>"; };
 		8338A4B026BBD14A008677FE /* MainScreenFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenFactory.swift; sourceTree = "<group>"; };
 		8338A4B226BBDC25008677FE /* FlashlightMiddleware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashlightMiddleware.swift; sourceTree = "<group>"; };
+		834BF98926C1525E00624E63 /* CommandWith.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandWith.swift; sourceTree = "<group>"; };
+		834BF98B26C153EA00624E63 /* DebugLogMiddleware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugLogMiddleware.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +129,7 @@
 			children = (
 				8338A49E26BBCBD3008677FE /* UpdateDateMiddleware.swift */,
 				8338A4B226BBDC25008677FE /* FlashlightMiddleware.swift */,
+				834BF98B26C153EA00624E63 /* DebugLogMiddleware.swift */,
 			);
 			path = Middlewares;
 			sourceTree = "<group>";
@@ -133,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				8338A4A526BBCDB5008677FE /* StoreLocator.swift */,
+				834BF98926C1525E00624E63 /* CommandWith.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -264,6 +270,7 @@
 				8338A4B326BBDC25008677FE /* FlashlightMiddleware.swift in Sources */,
 				8338A4A626BBCDB5008677FE /* StoreLocator.swift in Sources */,
 				8338A4AE26BBD13D008677FE /* MainViewPresenter.swift in Sources */,
+				834BF98C26C153EA00624E63 /* DebugLogMiddleware.swift in Sources */,
 				8338A49B26BBCB98008677FE /* DateState.swift in Sources */,
 				8338A47D26BBBCDF008677FE /* AppDelegate.swift in Sources */,
 				8338A47F26BBBCDF008677FE /* SceneDelegate.swift in Sources */,
@@ -271,6 +278,7 @@
 				8338A49926BBCB34008677FE /* TorchSettingsState.swift in Sources */,
 				8338A49F26BBCBD3008677FE /* UpdateDateMiddleware.swift in Sources */,
 				8338A4A126BBCC7C008677FE /* ApplicationState.swift in Sources */,
+				834BF98A26C1525E00624E63 /* CommandWith.swift in Sources */,
 				8338A49726BBCAFA008677FE /* State.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -479,8 +487,8 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/betterme-dev/ReduxCore.git";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.0;
+				kind = exactVersion;
+				version = 2.0.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
