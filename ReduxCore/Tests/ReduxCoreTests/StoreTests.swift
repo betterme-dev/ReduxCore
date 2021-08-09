@@ -41,11 +41,12 @@ final class StoreTests: XCTestCase {
     func testObserve() {
         let expectation = XCTestExpectation()
         
-        sut.observe(with: CommandWith { [unowned self] state in
+        let endObserving = sut.observe(with: { [unowned self] state in
             XCTAssert(self.state == state)
             expectation.fulfill()
         })
         wait(for: [expectation], timeout: 1)
+        endObserving.cancel()
     }
     
     func testDispatchAction() {
@@ -60,13 +61,14 @@ final class StoreTests: XCTestCase {
         
         let expectation = XCTestExpectation()
         
-        sut.observe(with: CommandWith { _ in
+        let endObserving = sut.observe(with: { _ in
             if self.dispatchedActions.count == 3 {
                 expectation.fulfill()
             }
         })
         
         wait(for: [expectation], timeout: 1)
+        endObserving.cancel()
         
         XCTAssert(dispatchedActions[0] as! TestAction == expectedActions[0])
         XCTAssert(dispatchedActions[1] as! TestAction == expectedActions[1])

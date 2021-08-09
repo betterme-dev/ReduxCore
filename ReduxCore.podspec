@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ReduxCore'
-  s.version          = '1.0.0'
+  s.version          = '2.0.0'
   s.summary          = 'Easy to use Redux abstractions for iOS projects'
   
   s.description      = "Redux abstractions for BetterMe projects and iOS community"
